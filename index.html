@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Leads Tracker Web App</title>
+  </head>
+  <body>
+    <!-- Input for URL -->
+    <input type="text" id="input-el" placeholder="Input Lead URL" />
+
+    <!-- Input for Title -->
+    <input type="text" id="title-el" placeholder="Input Lead Title" />
+
+    <!-- Dropdown for Category -->
+    <select id="category-el">
+      <option value="Business">Business</option>
+      <option value="Personal">Personal</option>
+      <option value="Job Search">Job Search</option>
+    </select>
+
+    <!-- Textarea for Notes -->
+    <textarea id="notes-el" placeholder="Add notes about the lead"></textarea>
+
+    <!-- Buttons -->
+    <button id="input-btn">SAVE INPUT</button>
+    <button id="delete-btn">DELETE ALL</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
