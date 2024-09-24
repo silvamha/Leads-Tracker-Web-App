@@ -1,3 +1,13 @@
+// Import files from firebaseConfig.js
+import { firebaseConfig } from './config.js'; // Adjust path if necessary
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const inputEl = document.querySelector("#input-el"); // URL input
   const titleEl = document.querySelector("#title-el"); // Title input
