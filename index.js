@@ -113,6 +113,9 @@
 
 
 
+import { db, collection, addDoc } from './firebase-config.js';
+
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Fetching leads...");
 
