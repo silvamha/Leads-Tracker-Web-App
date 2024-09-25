@@ -9,4 +9,4 @@ package-lock.json
 
 #Ignore Firebase Config Info
 firebaseConfig.js 
-
+_firebase-config.js
