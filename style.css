@@ -20,6 +20,7 @@ button {
     border: 1px solid #5f9341;
     font-weight: bold;
     width: 100%; /* Ensure buttons take full width on small screens */
+    margin-top: 2px;
 }
 
 #delete-btn {
