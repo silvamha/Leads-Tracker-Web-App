@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Ensure all elements fit within their containers */
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #5f9341;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #5f9341;
+    font-weight: bold;
+    width: 100%; /* Ensure buttons take full width on small screens */
+}
+
+#delete-btn {
+    background: white;
+    color: #5f9341;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 5px;
+}
+
+a {
+    color: #5f9341;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (mobile phones) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input, textarea, select, button {
+        width: 100%;
+    }
+
+    ul {
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+    }
+
+    ul {
+        width: 80%;
+    }
+}
+
+/* Large devices (laptops/desktops) */
+@media (min-width: 1025px) {
+    body {
+        padding: 30px;
+        font-size: 18px;
+    }
+
+    input, textarea, select {
+        width: 60%;
+    }
+
+    ul {
+        width: 60%;
+    }
+
+    button {
+        width: auto; /* Default to auto on large screens */
+        margin-top: 1px;
+    }
+}

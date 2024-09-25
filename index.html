@@ -3,34 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Leads Tracker Web App</title>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+  
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDPibR8kmdmKd34BBCDzVeqnh1eZs7kQQw",
+          authDomain: "leads-tracker-b5d1f.firebaseapp.com",
+          projectId: "leads-tracker-b5d1f",
+          storageBucket: "leads-tracker-b5d1f.appspot.com",
+          messagingSenderId: "990555275139",
+          appId: "1:990555275139:web:9096bb1a26b376adabc0b6"
+        };
+  
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+  
+        // Exporting db to use in index.js
+        window.db = db;
+        window.collection = collection;
+        window.addDoc = addDoc;
+      </script>
   </head>
+
   <body>
     <!-- Input for URL -->
     <input type="text" id="input-el" placeholder="Input Lead URL" />
-
     <!-- Input for Title -->
     <input type="text" id="title-el" placeholder="Input Lead Title" />
-
     <!-- Dropdown for Category -->
     <select id="category-el">
       <option value="Business">Business</option>
       <option value="Personal">Personal</option>
       <option value="Job Search">Job Search</option>
     </select>
-
     <!-- Textarea for Notes -->
     <textarea id="notes-el" placeholder="Add notes about the lead"></textarea>
-
-    <!-- Here’s the missing UL element -->
+    <!-- UL element for displaying leads -->
     <ul id="ul-el"></ul>
-
     <!-- Buttons -->
     <button id="input-btn">SAVE INPUT</button>
     <button id="tab-btn">SAVE TAB</button>
     <button id="delete-btn">DELETE ALL</button>
 
-    <script src="index.js" type="module"></script>
+    <!-- Your JS file (after Firebase initialization) -->
+    <script src="./index.js" defer></script>
   </body>
 </html>
